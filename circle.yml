@@ -15,7 +15,7 @@ test:
 
 deployment:
   hub:
-    branch: [circle_ci_publish, master]
+    branch: [circleci_publish, master]
     commands:
       - docker login -e $DOCKERHUB_EMAIL -u $DOCKERHUB_USER_ID -p $DOCKERHUB_PASSWORD
       - docker tag dockerapp_dockerapp $DOCKERHUB_USER_ID/dockerapp:$CIRCLE_SHA1
